@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bellybutton Biodiversity</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="static/js/app.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="static/images/green_bacteria1.jpg" style="width:380px;height:400px;"> >
+            </div>
+            <div class="col-md-8 jumbotron text-center">
+                <h1>Belly Button Biodiversity Dashboard</h1>
+                <p>When is the last time you washed your belly button? In a studied published in PLOS ONE, researchers found 2,368 species of bacteria in just 60 belly button samples.
+                    Today our wesite will allow you to explore some test subjects who allowed us to test their belly buttons for what bacteria was contained with in them.
+                    The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
+                    We hope this will allow all who see it to consider spending some extra time to make sure they are washing themselves properly to help prevent infections or any vicious bacteria to grow.  
+                </p>
+            </div>
+            <div class="col-md-2">
+                <img src="static/images/green_bacteria1.jpg" style="width:400px;height:400px;"> >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="well">
+                    <h5>Start by selecting a Test Subject ID number!</h5>
+                    <h4>Test Subject ID No.:</h4>
+                    <select id="selDataset"></select>
+                </div>
+                <br>
+                <br>
+                <div class="card border-primary mb-3">
+                    <div class="card-header">Demographic Info</div>
+                    <div id="sample-metadata" class="card-body">
+                    </div>
+                </div>
+                <div>
+                    <h6>This is the Demographic make up of your choose Test Subject.
+                        Information includes categories such as: race, sex, age and, where they live.
+                    </h6>
+                </div>
+                <br>
+                <br>
+            </div>
+            <div class="col-md-5">
+                <div id="bar"></div>
+                <div>
+                    <h6>This barchart shows how much of the 10 most found type of bacteria that was detected in our test subject by the Bacteria ID</h6>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div id="gauge"></div>
+                <h6>This gauge shows how often our test subject washed per week. You should compare this too how much bacteria is found from the barchart to the left. It seems that though you cannot get rid of all the bacteria no matter how much you wash. But the more that you do the less likely you will have so many different kinds stored with in your naval.
+                </h6>
+        </div>
+        <div class="col-md-12">
+            <img src="static/images/green_bacteria2.jpg" style="width:2300px;height:400px;"> >
+        </div>
+            </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="bubble"></div>
+                <h6>This Bubble chart shows the count of each bacteria found in our test subject per the bacteria found. Get this the Size of the bubble represents the number samples found of that bacteria. So the Bigger the bubble the more of that bacteria was found in the subject. Bacteria is identified by the OTU_ID.
+                Hover over a bubble to get see the ecxact OTU ID and the true measure</h6>
+            </div>
+        </div>
+        <div class="col-md-12 jumbotron text-center">
+            <h1>What does this mean??</h1>
+            <p>Bacteria is hard to get rid of. It can get anywhere, or on anything, and looks for the small cracks to live and mutiply in. This data set shows us individuals wash rate per week, as in showering them selves and surprisingly some even reported that they dont shower at all.
+                But we often found that the more washing a person does in a week the less likely they are to have as much bacteria in their naval as someone who doesnt take many baths or any if at all. if you would like more information pertaining to this data set and the study behing it please visit the following link <a href="url">http://robdunnlab.com/projects/belly-button-biodiversity/</a> 
+            </p>
+    </div>
+</body>
+
+</html>
